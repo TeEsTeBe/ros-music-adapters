@@ -6,7 +6,7 @@
 
 find_package(PkgConfig)
 
-find_path(MUSICADAPTER_INCLUDE_DIR NAMES Port.h InPort.h OutPort.h Adapter.h HINTS ${MUSICADAPTERS_ROOT_DIR}/include)
+find_path(MUSICADAPTER_INCLUDE_DIR NAMES Port.h InPort.h OutPort.h Adapter.h HINTS ${MUSICADAPTER_ROOT_DIR}/include)
 
 find_library(MUSICADAPTER_LIBRARY NAMES libmusicadapter.so HINTS ${MUSICADAPTER_ROOT_DIR}/lib)
 
