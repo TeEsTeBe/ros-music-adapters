@@ -17,13 +17,13 @@ A collection of adapters to connect the Robot Operating System to the MUSIC libr
 - MUSIC <https://github.com/INCF/MUSIC>
 	* clone git repo: https://github.com/INCF/MUSIC
 	* pip install mpi4py
-	* cd <MUSIC-repo>
+	* cd /PATH/TO/MUSIC/REPOSITORY
 	* libtoolize
 	* aclocal
 	* autoheader
 	* autoconf
 	* automake --add-missing
-	* ./configure [--prefix=<path-to-install-music-to>]
+	* ./configure [--prefix=/MUSIC/INSTALLATION/PATH]
 	* make
 	* make check
 	* make install
@@ -37,7 +37,7 @@ A collection of adapters to connect the Robot Operating System to the MUSIC libr
 - MUSIC-adapters
 	* git clone https://github.com/incf-music/music-adapters
 	* sudo apt install pkg-config libjsoncpp-dev libzmq3-dev libblas-dev libgsl-dev
-	* cmake -DCMAKE_INSTALL_PREFIX:PATH=<music-adapters-install-path> -DMUSIC_ROOT_DIR=<path-to-MUSIC-install> <music-adapters_SOURCE>
+	* cmake -DCMAKE_INSTALL_PREFIX:PATH=/MUSIC_ADAPTERS/INSTALL/PATH -DMUSIC_ROOT_DIR=/MUSIC/INSTALLATION/PATH /MUSIC_ADAPTERS/SRC/PATH
 	* make
 	* make install
 
@@ -51,7 +51,7 @@ The ros-music-adapters can be installed as a catkin package. (see http://wiki.ro
 
 ### .. or with cmake
 - create build dir and cd into it
-- cmake -DCMAKE_INSTALL_PREFIX:PATH=<path-to-install-ros-music-adapters-to> -DMUSICADAPTER_ROOT_DIR=<instal-dir-of-musicadapters> <src-dir-of-ros-music-adapters>
+- cmake -DCMAKE_INSTALL_PREFIX:PATH=/ROS_MUSIC_ADAPTERS/INSTALLATION/PATH -DMUSICADAPTER_ROOT_DIR=/MUSIC_ADAPTERS/INSTALLATION/PATH /ROS_MUSIC_ADAPTERS/SRC/PATH
 - make
 - make install
 
@@ -62,7 +62,7 @@ The ros-music-adapters can be installed as a catkin package. (see http://wiki.ro
 If you want to use the ros-music-adapters with NEST, you have to compile NEST with MUSIC and MPI(for more details see https://nest-simulator.readthedocs.io/en/latest/installation/index.html and https://nest-simulator.readthedocs.io/en/latest/installation/install_options.html):
 - Download or clone NEST
 - Install dependencies
-- cmake -DCMAKE_INSTALL_PREFIX:PATH=/home/schultetobrinke/nest/nest-simulator-2.18 /home/schultetobrinke/Downloads/NEST/2.18/nest-simulator-2.18.0 -Dwith-music=ON [<path-to-music-installation>] -Dwith-mpi=ON
+- cmake -DCMAKE_INSTALL_PREFIX:PATH=/NEST/INSTALLATION/DIR /NEST/SRC/DIR -Dwith-music=ON[or /PATH/TO/MUSIC/INSTALLATION] -Dwith-mpi=ON
 - make 
 - make install
 - make installcheck
