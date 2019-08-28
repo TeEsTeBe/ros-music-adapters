@@ -34,7 +34,7 @@ A collection of adapters to connect the Robot Operating System to the MUSIC libr
 	if you want to test it: mpirun -np 4 /usr/local/bin/music [or path-to-install-music-to/bin/music] examples/demo.music
 	```
 - OpMPI
-	for example in Ubuntu 18.04: sudo apt install libblacs-mpi-dev
+	for example in Ubuntu 18.04: `sudo apt install libblacs-mpi-dev`
 - pthread
 
 
